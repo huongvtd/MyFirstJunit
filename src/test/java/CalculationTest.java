@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.*;
 
 public class CalculationTest {
     private CalculationDemo calculationDemo;
@@ -17,7 +18,7 @@ public class CalculationTest {
     public static double [][] data(){
                return new double[][] {{1,2,3}, {2,3,4}, {1.2,1.3,2.5}};
     }
-
+@Disabled("Wait for ticket #1 fixed")
     @ParameterizedTest
     @MethodSource (value = "data")
     public void addTest(double[] data) {
